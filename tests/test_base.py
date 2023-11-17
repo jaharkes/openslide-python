@@ -39,7 +39,7 @@ class TestLibrary(unittest.TestCase):
             if name.startswith('_') or name[0].isupper():
                 continue
             # ignore random imports
-            if hasattr(ctypes, name) or name in ('count', 'platform'):
+            if hasattr(ctypes, name) or name in ('annotations', 'count', 'platform'):
                 continue
             self.assertTrue(
                 hasattr(getattr(lowlevel, name), 'available'),
